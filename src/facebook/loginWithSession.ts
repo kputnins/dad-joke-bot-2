@@ -1,6 +1,5 @@
 import { Page, Protocol } from 'puppeteer';
-import { FACEBOOK_URL } from '../constants/constants';
-import { isLoggedIn } from './isLoggedIn';
+import { FACEBOOK_URL, SELECTORS } from '../constants/constants';
 
 export const loginWithSession = async (
   cookies: Protocol.Network.Cookie[],
@@ -10,5 +9,12 @@ export const loginWithSession = async (
   await page.setCookie(...cookies);
   await page.goto(FACEBOOK_URL, { waitUntil: 'networkidle2' });
 
-  isLoggedIn(page);
+  try {
+    await page.waitForSelector(SELECTORS.messengerIcon);
+    console.log('App is logged into Facebook successfully');
+    return;
+  } catch (error) {
+    console.error('App is not logged into Facebook');
+    throw error;
+  }
 };

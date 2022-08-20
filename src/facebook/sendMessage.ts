@@ -18,7 +18,7 @@ export const sendMEssage = async (
   }
 
   try {
-    await sleep(generateRandomInteger({ min: 4000, max: 5000 }));
+    await sleep(generateRandomInteger({ min: 3000, max: 4000 }));
     await page.waitForSelector(SELECTORS.chatGroup);
     await page.click(SELECTORS.chatGroup);
     console.log('Selected chat');
@@ -30,8 +30,11 @@ export const sendMEssage = async (
   try {
     await sleep(generateRandomInteger({ min: 500, max: 1000 }));
     await page.waitForSelector(SELECTORS.messageInput);
-    await page.type(SELECTORS.messageInput, message);
+    await page.type(SELECTORS.messageInput, message, {
+      delay: generateRandomInteger({ min: 5, max: 50 }),
+    });
     await page.click(SELECTORS.sendButton);
+    await sleep(generateRandomInteger({ min: 500, max: 1000 }));
     console.log('Sent message: ', message);
   } catch (error) {
     console.error('Failed to send message');

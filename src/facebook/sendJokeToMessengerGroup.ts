@@ -6,10 +6,8 @@ import { loginWithCredentials } from './loginWithCredentials';
 import { loginWithSession } from './loginWithSession';
 import { sendMEssage } from './sendMessage';
 
-import { USERNAME, PASSWORD } from '../../credentials.json';
-
 export const sendJokeToMessengerGroup = async (message: string) => {
-  const browser = await getDefaultBrowser(false); // set to true
+  const browser = await getDefaultBrowser(false);
   const page = await getDefaultPage(browser);
   let cookies: null | Protocol.Network.Cookie[] = null;
 
@@ -31,10 +29,10 @@ export const sendJokeToMessengerGroup = async (message: string) => {
       console.log(`Logged in using session cookies`);
     } catch (error) {
       console.error(`Unable to login using session: ${error}`);
-      await loginWithCredentials(USERNAME, PASSWORD, page);
+      await loginWithCredentials(page);
     }
   } else {
-    await loginWithCredentials(USERNAME, PASSWORD, page);
+    await loginWithCredentials(page);
   }
 
   // Save our freshest cookies that contain our Facebook session
