@@ -4,7 +4,10 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node --esm src/index.ts"
+    "start": "ts-node-transpile-only --esm src/index.ts"
+  },
+  "dependencies": {
+    "puppeteer": "^16.2.0"
   },
   "devDependencies": {
     "@liene-putnina/eslint-config-lintmyride": "^1.0.6",
