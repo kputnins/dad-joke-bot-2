@@ -4,7 +4,8 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-transpile-only --esm src/index.ts"
+    "start": "ts-node-transpile-only --esm src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "axios": "^0.27.2",
