@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
+  "author": "kaspars putniņš",
+  "repository": {
+    "url": "https://github.com/kputnins/dad-joke-bot-2"
+  },
   "scripts": {
     "start": "ts-node-transpile-only --esm src/index.ts",
     "build": "tsc"
