@@ -13,9 +13,9 @@ This is made just for fun for my personal use in a group chat with my friends. *
 - Register to reddit
 - Register an app to access the reddit API
 - Create a Facebook account for the bot (Don't use your real one, because FB might block it for pulling these shenanigans)
-- Get the thread ID you want the bot to post into. This can be either form the chat with a single person or from a group chat
+- Get the thread ID you want the bot to post into. This can be either from the chat with a single person or from a group chat
 - Add the bot to the group chat and/or make friend-requests if required
-- Create a `credidentials.json` file with the required details:
+- Create a `credentials.json` file with the required details:
 
 ```json
 {
