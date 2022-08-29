@@ -1,6 +1,5 @@
 import { Browser, launch } from 'puppeteer';
-
-const FACEBOOK_URL = 'https://www.facebook.com';
+import { FACEBOOK_URL } from '../constants/constants';
 
 export const getDefaultBrowser = async (
   headless: boolean,

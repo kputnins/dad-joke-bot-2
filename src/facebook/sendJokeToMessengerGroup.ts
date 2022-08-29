@@ -4,7 +4,7 @@ import { getDefaultBrowser } from './getDefaultBrowser';
 import { getDefaultPage } from './getDefaultPage';
 import { loginWithCredentials } from './loginWithCredentials';
 import { loginWithSession } from './loginWithSession';
-import { sendMEssage } from './sendMessage';
+import { sendMEssages } from './sendMessages';
 
 export const sendJokeToMessengerGroup = async (message: string) => {
   const browser = await getDefaultBrowser(false);
@@ -42,7 +42,7 @@ export const sendJokeToMessengerGroup = async (message: string) => {
   });
 
   // Send message
-  await sendMEssage(page, message);
+  await sendMEssages(page, message);
 
   // close
   await page.close();
