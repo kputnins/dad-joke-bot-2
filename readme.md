@@ -13,7 +13,7 @@ This is made just for fun for my personal use in a group chat with my friends. *
 - Register to reddit
 - Register an app to access the reddit API
 - Create a Facebook account for the bot (Don't use your real one, because FB might block it for pulling these shenanigans)
-- Get the thread ID you want the bot to post into. This can be either from the chat with a single person or from a group chat
+- Get the thread IDs you want the bot to post into. This can be either from the chat with a single person or from a group chat
 - Add the bot to the group chat and/or make friend-requests if required
 - Create a `credentials.json` file with the required details:
 
@@ -25,7 +25,7 @@ This is made just for fun for my personal use in a group chat with my friends. *
   "REDDIT_SECRET": "reddit-app-secret",
   "REDDIT_USER": "yoloSwag420",
   "REDDIT_PASSWORD": "1234pa$$word",
-  "MESSENGER_CHAT_ID": "1234567891234567"
+  "MESSENGER_CHAT_IDS": ["1234567891234567", "2345678912345678"]
 }
 ```
 
