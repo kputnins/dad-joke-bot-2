@@ -1,10 +1,10 @@
 import { getDadJoke } from './reddit/getDatJoke';
-import { sendJokeToMessengerGroup } from './facebook/sendJokeToMessengerGroup';
+import { postInFacebook } from './facebook/postInFacebook';
 
 const main = async () => {
   const joke = await getDadJoke();
-  console.log(joke);
-  await sendJokeToMessengerGroup(joke);
+  console.log('\n', joke, '\n');
+  await postInFacebook(joke);
 };
 
 main();

@@ -15,4 +15,7 @@ export const SELECTORS = {
   messageInput: 'div div div div div div div div div[aria-label="Message"]',
   sendButton: 'div[aria-label="Press enter to send"][role="button"]',
   closeChatButton: 'div[aria-label="Close chat"][role="button"]',
+  createPostButton: `div[aria-label="Create a post"][role="region"] > div > div`,
+  createPostInput: `div[aria-label="What's on your mind, Dād?"][role="textbox"]`,
+  postButton: `div[aria-label="Post"][role="button"]`,
 };
