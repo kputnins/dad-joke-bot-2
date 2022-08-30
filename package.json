@@ -17,7 +17,7 @@
     "qs": "^6.11.0"
   },
   "devDependencies": {
-    "@liene-putnina/eslint-config-lintmyride": "^1.0.6",
+    "@liene-putnina/eslint-config-lintmyride": "^1.0.8",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint": "^8.22.0",
