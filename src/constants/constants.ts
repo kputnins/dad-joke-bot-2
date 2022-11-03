@@ -12,7 +12,7 @@ export const SELECTORS = {
   passwordField: '#pass',
   loginButton: 'button[name=login]',
   chatGroup: `[href="/messages/t`,
-  messageInput: 'div[data-testid="mwchat-tab"] div[aria-label="Message"]',
+  messageInput: 'div div div div div div div div div[aria-label="Message"]',
   sendButton: 'div[aria-label="Press enter to send"][role="button"]',
   closeChatButton: 'div[aria-label="Close chat"][role="button"]',
 };
