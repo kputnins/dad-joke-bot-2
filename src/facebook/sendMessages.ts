@@ -39,7 +39,7 @@ export const sendMessages = async (
       });
       await page.click(SELECTORS.sendButton);
       await sleep(generateRandomInteger({ min: 300, max: 500 }));
-      console.log('Sent message: ', message);
+      console.log('Sent message:\n', message, '\n');
     } catch (error) {
       console.error('Failed to send message');
       throw error;
@@ -48,7 +48,7 @@ export const sendMessages = async (
     try {
       await page.click(SELECTORS.closeChatButton);
       await sleep(generateRandomInteger({ min: 500, max: 1000 }));
-      console.log('Closed chat with id: ', id);
+      console.log('Closed chat with id: ', id, '\n');
     } catch (error) {
       console.error('Failed to close chat with id:', id);
       throw error;

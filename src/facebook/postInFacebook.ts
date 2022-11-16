@@ -4,9 +4,10 @@ import { getDefaultBrowser } from './getDefaultBrowser';
 import { getDefaultPage } from './getDefaultPage';
 import { loginWithCredentials } from './loginWithCredentials';
 import { loginWithSession } from './loginWithSession';
+import { postDadJoke } from './postDadJoke';
 import { sendMessages } from './sendMessages';
 
-export const sendJokeToMessengerGroup = async (message: string) => {
+export const postInFacebook = async (message: string) => {
   const browser = await getDefaultBrowser(false);
   const page = await getDefaultPage(browser);
   let cookies: null | Protocol.Network.Cookie[] = null;
@@ -41,7 +42,10 @@ export const sendJokeToMessengerGroup = async (message: string) => {
     encoding: 'utf-8',
   });
 
-  // Send message
+  // post message to profile wall
+  await postDadJoke(page, message);
+
+  // Send message to chat groups
   await sendMessages(page, message);
 
   // close
