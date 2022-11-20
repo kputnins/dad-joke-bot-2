@@ -1,6 +1,6 @@
 # Facebook messenger dad-joke bot
 
-A simple bot that posts the top dad joke of the day from `r/dadjokes` to a Facebook messenger thread:
+A simple bot that posts the top dad joke of the week from `r/dadjokes` to a Facebook messenger thread:
 
 ![Screenshot](screenshot.png)
 
@@ -8,7 +8,7 @@ A simple bot that posts the top dad joke of the day from `r/dadjokes` to a Faceb
 
 This is made just for fun for my personal use in a group chat with my friends. **Use at your own risk**
 
-## To use:
+## To use
 
 - Register to reddit
 - Register an app to access the reddit API

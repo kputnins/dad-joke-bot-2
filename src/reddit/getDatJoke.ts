@@ -11,7 +11,7 @@ export const getDadJoke = async (): Promise<string> => {
   return new Promise((resolve) => {
     axios
       .get(
-        'https://oauth.reddit.com/r/dadjokes/top/.json?limit=1&t=day',
+        'https://oauth.reddit.com/r/dadjokes/top/.json?limit=1&t=week',
         options,
       )
       .then((response) => {
@@ -24,7 +24,7 @@ export const getDadJoke = async (): Promise<string> => {
               '\n',
             );
           resolve(
-            `\`Reddit dad-joke of the day\`\n_${firstLine}_\n*${secondLine}*`,
+            `\`Reddit dad-joke of the week\`\n_${firstLine}_\n*${secondLine}*`,
           );
         }
       })
